@@ -11,6 +11,21 @@
     <junit.jupiter.version>5.7.1</junit.jupiter.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+          <configuration>
+              <!-- See https://nodejs.org/en/download/ for latest node and npm (lts) versions -->
+              <nodeVersion>v10.13.0</nodeVersion>
+              <npmVersion>6.4.1</npmVersion>
+            </configuration>
+          </execution>
+          <execution>
+            <id>npm install</id>
+            <goals>
+              <goal>npm</goal>
+            </goals>
+            <!-- run this plugin during the generate-resources phase of the build -->
+            <phase>generate-resources</phase>
+          </execution>
+        </executions>
   <dependencies>
     <dependency>
       <groupId>org.junit.jupiter</groupId>
